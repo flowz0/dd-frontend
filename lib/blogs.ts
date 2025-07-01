@@ -1,9 +1,11 @@
 import { BlogProps } from "@/types/blog";
 import axios from "axios";
 
+const api = process.env.NEXT_PUBLIC_API_URL;
+
 export async function getAllBlogs(): Promise<BlogProps[]> {
   try {
-    const res = await axios.get("http://localhost:5001/api/blogs", { withCredentials: true });
+    const res = await axios.get(`${api}/api/blogs`, { withCredentials: true });
     if (!Array.isArray(res.data)) {
       throw new Error("Invalid response: expected an array of blogs");
     }
@@ -16,7 +18,7 @@ export async function getAllBlogs(): Promise<BlogProps[]> {
 
 export async function getBlogById(id: string): Promise<BlogProps | null> {
   try {
-    const res = await axios.get(`http://localhost:5001/api/blogs/${id}`, {
+    const res = await axios.get(`${api}/api/blogs/${id}`, {
       withCredentials: true,
     });
     if (res.status === 200 && res.data) {

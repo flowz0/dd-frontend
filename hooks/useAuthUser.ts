@@ -3,6 +3,8 @@ import { useRouter } from "next/navigation";
 import axios from "axios";
 import { User } from "@/types/user";
 
+const api = process.env.NEXT_PUBLIC_API_URL;
+
 export default function useAuthUser(redirectToLogin = true) {
   const [user, setUser] = useState<User | null>(null);
   const router = useRouter();
@@ -10,7 +12,7 @@ export default function useAuthUser(redirectToLogin = true) {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const res = await axios.get("http://localhost:5001/api/auth/check", {
+        const res = await axios.get(`${api}/api/auth/check`, {
           withCredentials: true,
         });
         setUser(res.data.user);

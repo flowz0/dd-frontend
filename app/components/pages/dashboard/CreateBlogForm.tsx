@@ -26,6 +26,7 @@ export default function CreateBlogForm() {
   const [errors, setErrors] = useState<Partial<BlogProps>>({});
   const router = useRouter();
   const user = useAuthUser();
+  const api = process.env.NEXT_PUBLIC_API_URL;
 
   useEffect(() => {
     if (blogData.img instanceof File) {
@@ -161,7 +162,7 @@ export default function CreateBlogForm() {
         author: `${user.firstName} ${user.lastName}`,
       };
 
-      const res = await axios.post("http://localhost:5001/api/blogs", payload, { withCredentials: true });
+      const res = await axios.post(`${api}/api/blogs`, payload, { withCredentials: true });
 
       if (res.status === 201 || res.status === 200) {
         toast.success("Blog created successfully!");

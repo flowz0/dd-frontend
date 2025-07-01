@@ -14,8 +14,8 @@ export default function LoginForm() {
     password: "",
   });
   const router = useRouter();
-
   const [errors, setErrors] = useState<Partial<LoginData>>({});
+  const api = process.env.NEXT_PUBLIC_API_URL;
 
   const validateField = (name: keyof LoginData, value: string): string => {
     if (name === "username" && !value.trim()) {
@@ -66,7 +66,7 @@ export default function LoginForm() {
 
     try {
       const res = await axios.post(
-        "http://localhost:5001/api/auth/login",
+        `${api}/api/auth/login`,
         {
           username: formData.username,
           password: formData.password,
@@ -79,7 +79,7 @@ export default function LoginForm() {
         router.push("/dashboard");
       }
     } catch (error) {
-      const axiosError = error as AxiosError<{error: string}>;
+      const axiosError = error as AxiosError<{ error: string }>;
       const errorMsg = axiosError?.response?.data?.error || "Something went wrong.";
       toast.error(errorMsg);
     }

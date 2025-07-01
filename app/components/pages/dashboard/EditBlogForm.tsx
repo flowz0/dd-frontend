@@ -18,6 +18,7 @@ export default function EditBlogForm({ initialData }: { initialData: BlogProps }
   const [previewUrl, setPreviewURL] = useState<string | null>(null);
   const router = useRouter();
   const user = useAuthUser();
+  const api = process.env.NEXT_PUBLIC_API_URL;
 
   useEffect(() => {
     if (blogData.img instanceof File) {
@@ -152,7 +153,7 @@ export default function EditBlogForm({ initialData }: { initialData: BlogProps }
         img: updatedImage,
       };
 
-      const res = await axios.put(`http://localhost:5001/api/blogs/${blogData._id}`, payload, {
+      const res = await axios.put(`${api}/api/blogs/${blogData._id}`, payload, {
         withCredentials: true,
       });
       if (res.status === 201 || res.status === 200) {

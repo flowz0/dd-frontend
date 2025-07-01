@@ -22,6 +22,7 @@ export default function DeleteBlogModal({
   refetchBlogs,
 }: ModalProps) {
   const modalRef = useRef<HTMLDivElement>(null);
+  const api = process.env.NEXT_PUBLIC_API_URL;
 
   useEffect(() => {
     const body = document.body;
@@ -42,7 +43,7 @@ export default function DeleteBlogModal({
 
   const handleDelete = async () => {
     try {
-      const res = await axios.delete(`http://localhost:5001/api/blogs/${deleteHref}`, { withCredentials: true });
+      const res = await axios.delete(`${api}/api/blogs/${deleteHref}`, { withCredentials: true });
       if (res.status === 201 || res.status === 200) {
         toast.success("Blog deleted successfully!");
         onClose();

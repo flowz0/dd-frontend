@@ -16,14 +16,15 @@ export default function DashboardPage() {
   const [blogs, setBlogs] = useState<BlogProps[]>([]);
   const [loading, setLoading] = useState(true);
   const router = useRouter();
+  const api = process.env.NEXT_PUBLIC_API_URL;
 
   const fetchData = async () => {
     try {
-      await axios.get("http://localhost:5001/api/auth/check", {
+      await axios.get(`${api}/api/auth/check`, {
         withCredentials: true,
       });
 
-      const blogsRes = await axios.get("http://localhost:5001/api/blogs", {
+      const blogsRes = await axios.get(`${api}/api/blogs`, {
         withCredentials: true,
       });
 

@@ -16,8 +16,8 @@ export default function RegisterForm() {
     password: "",
   });
   const router = useRouter();
-
   const [errors, setErrors] = useState<Partial<RegisterData>>({});
+  const api = process.env.NEXT_PUBLIC_API_URL;
 
   const validateField = (name: keyof RegisterData, value: string): string => {
     if (name === "firstName" && !value.trim()) {
@@ -77,7 +77,7 @@ export default function RegisterForm() {
     if (!validateForm()) return;
 
     try {
-      const res = await axios.post("http://localhost:5001/api/auth/register", formData, { withCredentials: true });
+      const res = await axios.post(`${api}/api/auth/register`, formData, { withCredentials: true });
       if (res.status === 201) {
         setFormData({ firstName: "", lastName: "", username: "", password: "" });
         setErrors({});
