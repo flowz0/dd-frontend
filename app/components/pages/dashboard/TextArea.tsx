@@ -1,7 +1,6 @@
 interface Props {
   name: string;
   label: string;
-  type?: string;
   placeholder: string;
   value: string;
   onChange: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;

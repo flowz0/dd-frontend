@@ -195,7 +195,6 @@ export default function CreateBlogForm() {
       <TextArea
         name="summary"
         label="Blog summary"
-        type="text"
         placeholder="Summary for blog"
         value={blogData.summary}
         onChange={handleChange}
@@ -241,7 +240,6 @@ export default function CreateBlogForm() {
       <TextArea
         name="paragraph"
         label="First paragraph"
-        type="text"
         placeholder="Paragraph for blog"
         value={blogData.paragraph}
         onChange={handleChange}
@@ -263,7 +261,6 @@ export default function CreateBlogForm() {
       <TextArea
         name="paragraph2"
         label="Second Paragraph"
-        type="text"
         placeholder="Second paragraph for blog"
         value={blogData.paragraph2}
         onChange={handleChange}
