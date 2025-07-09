@@ -10,7 +10,7 @@ export default function Stat({stat, title, desc}: StatProps) {
       <h3 className="text-xl font-semibold max-w-sm text-center sm:text-2xl">
         <span className="text-[#0080DB] font-bold">{stat}</span> {title}
       </h3>
-      <p className="max-w-xs text-center mt-2">
+      <p className="max-w-xs text-center mt-3">
         {desc}
       </p>
     </div>
