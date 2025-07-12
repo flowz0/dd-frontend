@@ -59,7 +59,7 @@ export default function DashboardPage() {
       <Header subtitle="Manage your blogs here. Create, view, update, or delete any blog.">
         Blog Dashboard
       </Header>
-      <div className="bg-[#ffffff] shadow shadow-[hsl(0,0%,80%)] mx-6 px-6 py-8 max-w-7xl lg:mx-auto rounded-lg lg:px-20 lg:py-20">
+      <div className="bg-[#ffffff] shadow shadow-[hsl(0,0%,80%)] mt-8 mx-6 px-6 py-8 max-w-7xl lg:mx-auto rounded-lg sm:mt-12 lg:px-20 lg:py-20">
         <div className="flex items-center justify-between">
           <h2 className="text-2xl font-semibold md:text-3xl">All Blogs</h2>
           <Link
