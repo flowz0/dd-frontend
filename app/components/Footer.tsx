@@ -8,7 +8,7 @@ import { FaTiktok } from "react-icons/fa";
 export default function Footer() {
   return (
     <footer>
-      <div className="py-32 px-6 max-w-7xl mx-auto">
+      <div className="py-20 px-6 max-w-7xl mx-auto sm:py-32">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-4">
           <Image
             src={DuctDaddyLogo}
@@ -50,7 +50,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="flex flex-col gap-2 mt-28 md:justify-between md:flex-row">
+        <div className="flex flex-col gap-2 mt-20 sm:mt-32 md:justify-between md:flex-row">
           <p>© 2025 Duct Daddy</p>
           <div className="flex flex-col gap-2 md:gap-8 md:flex-row">
             <Link href="/faq">Terms of Service</Link>
