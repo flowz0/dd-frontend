@@ -44,8 +44,8 @@ export default function BookingPage() {
 
   return (
     <>
-    <main className="pt-20 mb-36">
-      <header className="px-6 py-20 max-w-7xl mx-auto flex flex-col items-center">
+    <main className="bg-[#16385B] text-[#ffffff] pt-36 pb-28 px-6 sm:pt-44 sm:pb-32">
+      <header className="max-w-7xl mx-auto flex flex-col items-center">
         <h2 className="text-4xl font-semibold text-center sm:text-5xl">Online Booking</h2>
         <p className="mt-4 text-center max-w-xl mx-auto">
           Schedule an appointment with Duct Daddy Duct Cleaning.
