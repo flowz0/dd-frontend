@@ -16,12 +16,14 @@ const images = [
 export default function BeforeAfterPics() {
   return (
     <section className="bg-[#ffffff]">
-      <div className="py-32 px-6 max-w-7xl mx-auto">
+      <div className="py-20 px-6 max-w-7xl mx-auto sm:py-32">
         <h2 className="text-3xl font-semibold text-center sm:text-4xl">
-          See The Duct Daddy Difference
+          See The Duct Daddy
+          <br className="hidden sm:inline-block" />
+          {" "} Difference
         </h2>
-        <p className="text-center mt-4">
-          Real photos from homes in Oak Grove and all across KC.
+        <p className="text-center max-w-xl mx-auto mt-4">
+          Real photos from homes serviced in Oak Grove and all across Kansas City, MO.
         </p>
         <Carousel images={images} />
       </div>
