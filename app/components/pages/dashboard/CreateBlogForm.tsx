@@ -180,7 +180,7 @@ export default function CreateBlogForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="bg-[#ffffff] shadow shadow-[hsl(0,0%,80%)] mx-6 px-6 py-8 max-w-4xl flex flex-col gap-y-6 lg:mx-auto rounded-lg lg:px-20 lg:py-20" noValidate>
+    <form onSubmit={handleSubmit} className="bg-[#ffffff] shadow shadow-[hsl(0,0%,80%)] mt-8 mx-6 px-6 py-8 max-w-4xl flex flex-col gap-y-6 lg:mx-auto rounded-lg sm:mt-12 lg:px-20 lg:py-20" noValidate>
       <FormInput
         name="title"
         label="Blog title"
