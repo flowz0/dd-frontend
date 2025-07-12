@@ -3,14 +3,14 @@ import { FaCalendarAlt } from "react-icons/fa";
 
 export default function CTA() {
   return (
-    <section className="bg-[#ffffff] py-28 px-6">
+    <section className="bg-[#16385B] text-[#ffffff] py-20 px-6 sm:py-28">
       <div className="max-w-7xl mx-auto flex flex-col items-center">
         <header className="flex flex-col">
           <h2 className="text-3xl font-semibold text-center md:text-4xl">
             Breathe without worries
           </h2>
-          <p className="mt-4 text-center max-w-4xl">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore tenetur quisquam tempore perferendis neque saepe exercitationem quasi quam aliquid aut repellat, est eius reiciendis animi! Error facilis quidem hic nulla.
+          <p className="mt-4 text-center max-w-2xl">
+            Enjoy cleaner air and a healthier home with expert duct cleaning from Kansas City&apos;s trusted pros. Schedule your service today and feel the difference in every breath.
           </p>
         </header>
         <Link
