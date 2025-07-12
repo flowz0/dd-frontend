@@ -8,14 +8,14 @@ export default function FAQs() {
   const rightColumn = faqData.filter((_, index) => index % 2 === 1);
 
   return (
-    <section id="faqs" className="py-32 px-6 max-w-7xl mx-auto">
+    <section id="faqs" className="py-20 px-6 max-w-7xl mx-auto sm:py-32">
       <div className="flex flex-col items-center">
         <h2 className="text-3xl font-semibold text-center md:text-4xl">
           Frequently Asked Questions
         </h2>
       </div>
 
-      <div className="mt-8 flex flex-col gap-4 lg:flex-row">
+      <div className="mt-8 flex flex-col gap-4 sm:mt-12 lg:flex-row">
         <div className="flex flex-col gap-4 w-full lg:w-1/2">
           {leftColumn.map(({ question, answer }, index) => (
             <FAQ key={index} question={question} answer={answer} />
