@@ -3,11 +3,11 @@ import ReviewRow from "./ReviewRow";
 
 export default function ReviewSection() {
   return (
-    <section className="py-32 mx-auto relative">
+    <section className="py-20 mx-auto relative sm:py-32">
       <h2 className="text-3xl font-semibold text-center sm:text-4xl">
         What Our <span className="text-[#0080DB] font-bold">Customers</span> Are Saying
       </h2>
-      <div className="mt-8 flex flex-col gap-2 relative">
+      <div className="mt-8 flex flex-col gap-2 relative sm:mt-12">
         <ReviewRow reviews={topRowReviews} direction="right" />
         <ReviewRow reviews={bottomRowReviews} direction="left" />
       </div>
