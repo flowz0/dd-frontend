@@ -6,14 +6,14 @@ import ServiceAreaCard from "./ServiceAreaCard";
 export default function ServiceArea() {
   return (
     <section id="service-area" className="bg-[#ffffff]">
-      <div className="py-32 px-6 max-w-7xl mx-auto">
+      <div className="py-20 px-6 max-w-7xl mx-auto sm:py-32">
         <h2 className="text-3xl font-semibold text-center sm:text-4xl">
           Proudly Serving
           <br />
           Kansas City and Surrounding Areas
         </h2>
 
-        <div className="mt-8 grid grid-cols-1 gap-8 lg:grid-cols-2">
+        <div className="mt-8 grid grid-cols-1 gap-8 sm:mt-12 lg:grid-cols-2">
           <Image
             src={ServiceAreaImg}
             alt="Service area image"
