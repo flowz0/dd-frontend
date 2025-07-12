@@ -6,11 +6,11 @@ import MaintenanceImg from "@/public/services/preventativemaintenance.png";
 
 export default function Services() {
   return (
-    <section id="services" className="py-32 px-6 max-w-7xl mx-auto rounded-3xl flex flex-col items-center justify-center">
+    <section id="services" className="py-20 px-6 max-w-7xl mx-auto rounded-3xl flex flex-col items-center justify-center sm:py-32">
       <h2 className="text-3xl font-semibold text-center sm:text-4xl">
         Services We Offer
       </h2>
-      <div className="mt-8 flex flex-wrap justify-center flex-col gap-8 md:flex-row">
+      <div className="mt-8 flex flex-wrap justify-center flex-col gap-6 sm:mt-12 md:flex-row">
         <Service
           img={AirDuctImg}
           title="Air Duct Cleaning"
