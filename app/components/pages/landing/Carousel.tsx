@@ -64,7 +64,7 @@ export default function Carousel({
   }, [isVisible, currentIndex, autoPlayInterval, images.length]);
 
   return (
-    <div ref={ref} className="relative w-full aspect-[16/9] rounded-md shadow overflow-hidden mt-8">
+    <div ref={ref} className="relative w-full aspect-[16/9] rounded-md shadow shadow-[hsl(0,0%,80%)] overflow-hidden mt-8 sm:mt-12">
       <Image
         src={images[currentIndex]}
         alt={altTexts[currentIndex] || `Image ${currentIndex + 1}`}
