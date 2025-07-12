@@ -6,7 +6,7 @@ import { FaCalendarAlt } from "react-icons/fa";
 
 export default function Hero() {
   return (
-    <section className="pt-32 pb-28 px-6 max-w-7xl mx-auto flex flex-col gap-8 lg:flex-row lg:pt-40">
+    <section className="pt-36 pb-28 px-6 max-w-7xl mx-auto flex flex-col gap-8 sm:pt-44 sm:pb-32 lg:flex-row">
       <header className="flex flex-col items-center lg:w-1/2 lg:items-start">
         <h1 className="text-4xl font-semibold max-w-lg text-center sm:text-5xl lg:text-start">
           Kansas City&apos;s Trusted Air Duct & Dryer Vent Cleaning Experts
