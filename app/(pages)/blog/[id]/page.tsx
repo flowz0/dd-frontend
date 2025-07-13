@@ -6,7 +6,22 @@ import AllBlogs from "@/app/components/pages/blog/AllBlogs";
 import { getBlogById } from "@/lib/blogs";
 import { notFound } from "next/navigation";
 
-export default async function Page({ params }: { params: Promise<{ id: string }> }) {
+type Props = {
+  params: Promise<{ id: string }>;
+}
+
+export async function generateMetadata({ params }: Props) {
+  const resolvedParams = await params;
+  const id = resolvedParams.id;
+  const blog = await getBlogById(id);
+
+  return {
+    title: `${blog?.title} - Duct Daddy Duct Cleaning`,
+    description: blog?.summary,
+  }
+}
+
+export default async function Page({ params }: Props) {
   const resolvedParams = await params;
   const id = resolvedParams.id;
 
