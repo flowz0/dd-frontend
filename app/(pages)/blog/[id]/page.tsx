@@ -2,7 +2,7 @@ import BlogFeatures from "@/app/components/pages/blog/BlogFeatures";
 import Image from "next/image";
 import PlaceholderImg from "@/public/1920x1080.svg";
 import CTA from "@/app/components/CTA";
-import FeaturedBlogs from "@/app/components/pages/blog/FeaturedBlogs";
+import AllBlogs from "@/app/components/pages/blog/AllBlogs";
 import { getBlogById } from "@/lib/blogs";
 import { notFound } from "next/navigation";
 
@@ -60,7 +60,7 @@ export default async function Page({ params }: { params: Promise<{ id: string }>
       </article>
       <div className="py-32 px-6 max-w-7xl mx-auto">
         <h2 className="text-2xl font-semibold md:text-3xl">Other Blogs</h2>
-        <FeaturedBlogs />
+        <AllBlogs />
       </div>
       <CTA />
     </>
