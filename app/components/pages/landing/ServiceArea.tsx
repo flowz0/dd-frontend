@@ -13,7 +13,7 @@ export default function ServiceArea() {
           Kansas City and Surrounding Areas
         </h2>
 
-        <div className="mt-8 grid grid-cols-1 gap-8 sm:mt-12 lg:grid-cols-2">
+        <div className="mt-8 grid grid-cols-1 sm:mt-12 lg:grid-cols-2">
           <Image
             src={ServiceAreaImg}
             alt="Service area image"
