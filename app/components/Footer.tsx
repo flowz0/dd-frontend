@@ -19,17 +19,17 @@ export default function Footer() {
             <h4 className="font-bold">
               Useful links
             </h4>
-            <Link href="/about" className="w-fit">About Us</Link>
-            <Link href="/contact" className="w-fit">Contact Us</Link>
-            <Link href="/FAQ" className="w-fit">FAQs</Link>
+            <Link href="/" className="w-fit">About Us</Link>
+            <Link href="/booking" className="w-fit">Contact Us</Link>
+            <Link href="/#faqs" className="w-fit">FAQs</Link>
           </div>
           <div className="flex flex-col gap-2">
             <h4 className="font-bold">
               Resources
             </h4>
             <Link href="/blog" className="w-fit">Blog</Link>
-            <Link href="/contact" className="w-fit">Pricing</Link>
-            <Link href="/faq" className="w-fit">Services</Link>
+            <Link href="/booking" className="w-fit">Pricing</Link>
+            <Link href="/#services" className="w-fit">Services</Link>
           </div>
           <div className="flex flex-col gap-2">
             <h4 className="font-bold">
@@ -53,8 +53,8 @@ export default function Footer() {
         <div className="flex flex-col gap-2 mt-20 sm:mt-32 md:justify-between md:flex-row">
           <p>© 2025 Duct Daddy</p>
           <div className="flex flex-col gap-2 md:gap-8 md:flex-row">
-            <Link href="/faq">Terms of Service</Link>
-            <Link href="/faq">Privacy Policy</Link>
+            <Link href="/faqs">Terms of Service</Link>
+            <Link href="/faqs">Privacy Policy</Link>
           </div>
         </div>
       </div>
