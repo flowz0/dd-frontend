@@ -4,6 +4,7 @@ import Img2 from "@/public/gallery/2.png";
 import Img3 from "@/public/gallery/3.png";
 import Img4 from "@/public/gallery/4.png";
 import Img5 from "@/public/gallery/5.png";
+import Img6 from "@/public/gallery/6.png";
 
 const images = [
   Img1,
@@ -11,6 +12,7 @@ const images = [
   Img3,
   Img4,
   Img5,
+  Img6,
 ];
 
 export default function BeforeAfterPics() {
