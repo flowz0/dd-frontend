@@ -7,7 +7,7 @@ import DuctDaddyVan from "@/public/duct-daddy-vehicle.png";
 
 export default function Hero() {
   return (
-    <section className="relative pt-28 pb-44 px-6 sm:pt-40 sm:pb-40 overflow-hidden">
+    <section className="relative pt-28 pb-44 sm:pt-40 sm:pb-40 overflow-hidden">
 
       <div className="absolute bottom-0 right-0 z-10 lg:w-[720px] max-w-none lg:right-32">
         <Image
@@ -19,7 +19,7 @@ export default function Hero() {
         />
       </div>
 
-      <div className="relative max-w-7xl mx-auto flex flex-col items-center lg:gap-x-2 lg:flex-row">
+      <div className="relative max-w-7xl px-6 mx-auto flex flex-col items-center lg:gap-x-2 lg:flex-row">
         <header className="flex flex-col items-center lg:items-start lg:w-1/2">
           <h1 className="text-4xl font-semibold max-w-lg text-center sm:text-5xl lg:text-start">
             Kansas City&apos;s Trusted Air Duct & Dryer Vent Cleaning Experts
