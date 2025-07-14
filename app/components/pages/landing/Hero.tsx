@@ -7,13 +7,13 @@ import DuctDaddyVan from "@/public/duct-daddy-vehicle.png";
 
 export default function Hero() {
   return (
-    <section className="relative pt-28 pb-44 sm:pt-40 sm:pb-40 overflow-hidden">
+    <section className="relative pt-28 pb-32 sm:pt-40 sm:pb-32 overflow-hidden">
 
       <div className="absolute bottom-0 right-0 z-10 lg:w-[800px] max-w-none lg:right-32">
         <Image
           src={DuctDaddyVan}
           alt="Duct Daddy van"
-          className="w-96 h-auto lg:w-full"
+          className="w-[600px] h-auto lg:w-full"
           draggable={false}
           priority
         />
