@@ -9,7 +9,7 @@ export default function Hero() {
   return (
     <section className="relative pt-28 pb-44 sm:pt-40 sm:pb-40 overflow-hidden">
 
-      <div className="absolute bottom-0 right-0 z-10 lg:w-[720px] max-w-none lg:right-32">
+      <div className="absolute bottom-0 right-0 z-10 lg:w-[800px] max-w-none lg:right-32">
         <Image
           src={DuctDaddyVan}
           alt="Duct Daddy van"
