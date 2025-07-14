@@ -17,7 +17,7 @@ export default function ServiceArea() {
           <Image
             src={ServiceAreaImg}
             alt="Service area image"
-            className="h-full w-auto object-cover rounded-md"
+            className="h-auto w-full object-cover"
             draggable={false}
           />
           <div>
