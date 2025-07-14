@@ -14,6 +14,8 @@ export default function Footer() {
             src={DuctDaddyLogo}
             alt="Duct daddy logo"
             className="h-40 w-auto object-cover"
+            priority={false}
+            quality={100}
           />
           <div className="flex flex-col gap-2">
             <h4 className="font-bold">
