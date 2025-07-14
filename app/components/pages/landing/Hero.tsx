@@ -16,6 +16,7 @@ export default function Hero() {
           className="w-[600px] h-auto lg:w-full"
           draggable={false}
           priority
+          quality={100}
         />
       </div>
 
@@ -50,6 +51,7 @@ export default function Hero() {
             className="object-cover h-auto w-full max-w-4xl rounded-lg mt-12 shadow-lg shadow-[hsl(0,0%,80%)] lg:h-96 lg:mt-0"
             draggable={false}
             priority={true}
+            quality={100}
           />
         </div>
       </div>
