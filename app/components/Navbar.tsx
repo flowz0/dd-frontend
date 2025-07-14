@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import BrandLogo from "@/public/Duct-Daddy-03.png";
@@ -11,13 +11,37 @@ import { FaPhoneAlt, FaCalendarAlt } from "react-icons/fa";
 export default function Navbar() {
   const Links = [
     { name: "Blog", href: "/blog" },
-    { name: "Services", href: "/#services" },
-    { name: "Service Area", href: "/#service-area" },
-    { name: "FAQs", href: "/#faqs" },
+    { name: "Services", href: "#services" },
+    { name: "Service Area", href: "#service-area" },
+    { name: "FAQs", href: "#faqs" },
   ];
 
   const [isOpen, setIsOpen] = useState(false);
+  const router = useRouter();
   const pathname = usePathname();
+
+  const handleScrollToSection = (id: string) => {
+    if (pathname !== "/") {
+      localStorage.setItem("scrollTarget", id);
+      router.push("/");
+    } else {
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
+
+  useEffect(() => {
+    const target = localStorage.getItem("scrollTarget");
+    if (target && pathname === "/") {
+      const el = document.getElementById(target);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+      }
+      localStorage.removeItem("scrollTarget");
+    }
+  }, [pathname]);
 
   useEffect(() => {
     if (isOpen) {
@@ -30,7 +54,7 @@ export default function Navbar() {
   return (
     <nav className="bg-[#ffffff] shadow shadow-[hsl(0,0%,80%)] fixed h-20 w-full z-50">
       <div className="flex justify-between items-center h-full max-w-7xl mx-auto px-6">
-        <div className="flex gap-6">
+        <div className="flex gap-8">
           <Link href="/" onClick={() => setIsOpen(false)}>
             <Image
               src={BrandLogo}
@@ -45,27 +69,34 @@ export default function Navbar() {
           <ul className="hidden font-semibold text-base/[32px] tracking-[0.016em] md:flex md:items-center md:gap-x-4">
             {Links.map((link) => (
               <li key={link.href}>
-                <Link
-                  href={link.href}
-                  className={`transition-colors duration-300
-                    ${pathname === link.href
-                      ? "text-[#333333]"
-                      : "text-[hsl(0,0%,50%)] hover:text-[#333333]"
-                    }`}
-                >
-                  {link.name}
-                </Link>
+                {link.href.startsWith("#") ? (
+                  <button
+                    onClick={() => handleScrollToSection(link.href.slice(1))}
+                    className={`transition-colors duration-300
+                      ${pathname === "/" ? "text-[#333333] hover:text-[#0080DB]" : "hover:text-[#0080DB]"}`}
+                  >
+                    {link.name}
+                  </button>
+                ) : (
+                  <Link
+                    href={link.href}
+                    className={`transition-colors duration-300
+                      ${pathname === link.href ? "text-[#0080DB] hover:text-[#0080DB]" : "hover:text-[#0080DB]"}`}
+                  >
+                    {link.name}
+                  </Link>
+                )}
               </li>
             ))}
           </ul>
         </div>
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-6">
           {pathname === "/blog" || pathname === "/dashboard" || pathname === "/create-blog" || pathname.startsWith("/edit/") || pathname === "/login" || pathname === "/register" ? (
             <Link href="/dashboard" className="hidden bg-[#0080DB] text-[#ffffff] duration-300 transition-colors py-1 px-4 font-semibold text-base/[32px] tracking-[0.016em] rounded-lg md:block hover:bg-[hsl(205,100%,33%)] active:bg-[hsl(205,100%,23%)]">
               Dashboard
             </Link>
           ) : (
-            <>
+            <div className="flex gap-6">
               <Link href="tel:+18167082608" className="hidden text-[hsl(0,0%,50%)] font-semibold transition-colors duration-300 hover:text-[#333333] lg:flex lg:items-center lg:gap-x-2">
                 <FaPhoneAlt className="w-4 h-4" />
                 (816) 708-2608
@@ -81,7 +112,7 @@ export default function Navbar() {
                 <FaCalendarAlt className="w-4 h-4" />
                 Book online
               </Link>
-            </>
+            </div>
           )}
         </div>
 
@@ -124,16 +155,28 @@ export default function Navbar() {
             <ul className="flex flex-col gap-y-2 px-8 font-bold text-3xl/[42px] tracking-[0.016em]">
               {Links.map((link) => (
                 <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className={`${pathname === link.href
-                      ? "text-[#00b4ff]"
-                      : "text-[#333333]"
-                      }`}
-                    onClick={() => setIsOpen(!isOpen)}
-                  >
-                    {link.name}
-                  </Link>
+                  {link.href.startsWith("#") ? (
+                    <button
+                      onClick={() => {
+                        handleScrollToSection(link.href.slice(1));
+                        setIsOpen(false);
+                      }}
+                      className="text-[#333333]"
+                    >
+                      {link.name}
+                    </button>
+                  ) : (
+                    <Link
+                      href={link.href}
+                      className={`${pathname === link.href
+                        ? "text-[#00b4ff]"
+                        : "text-[#333333]"
+                        }`}
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {link.name}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
