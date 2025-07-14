@@ -53,8 +53,8 @@ export default function Footer() {
         <div className="flex flex-col gap-2 mt-20 sm:mt-32 md:justify-between md:flex-row">
           <p>© 2025 Duct Daddy</p>
           <div className="flex flex-col gap-2 md:gap-8 md:flex-row">
-            <Link href="/faqs">Terms of Service</Link>
-            <Link href="/faqs">Privacy Policy</Link>
+            <Link href="/#faqs">Terms of Service</Link>
+            <Link href="/#faqs">Privacy Policy</Link>
           </div>
         </div>
       </div>
