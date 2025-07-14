@@ -19,6 +19,7 @@ export default function ServiceArea() {
             alt="Service area image"
             className="h-auto w-full object-cover"
             draggable={false}
+            quality={100}
           />
           <div>
             <h2 className="text-xl font-semibold sm:text-2xl">Service Areas</h2>
