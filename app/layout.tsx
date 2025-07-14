@@ -12,8 +12,8 @@ export const arimo = Arimo({
 });
 
 export const metadata: Metadata = {
-  title: "Duct Daddy Duct Cleaning",
-  description: "Duct cleaning based in Kansas City, MO",
+  title: "Kansas City's Trusted Air Duct & Dryer Vent Cleaning Experts | Duct Daddy Duct Cleaning",
+  description: "Looking for trusted air duct cleaning or dryer vent services near you? Duct Daddy proudly serves homeowners and businesses across the KC metro. Whether you're in Missouri or Kansas, we're just a call away.",
 };
 
 export default function RootLayout({
