@@ -70,6 +70,7 @@ export default function Carousel({
         alt={altTexts[currentIndex] || `Image ${currentIndex + 1}`}
         className="w-full h-full object-cover  transition-opacity duration-500 ease-in-out"
         priority={false}
+        quality={100}
       />
       <button
         type="button"
