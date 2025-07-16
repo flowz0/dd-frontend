@@ -10,10 +10,10 @@ import { FaPhoneAlt, FaCalendarAlt } from "react-icons/fa";
 
 export default function Navbar() {
   const Links = [
-    { name: "Blog", href: "/blog" },
     { name: "Services", href: "#services" },
     { name: "Service Area", href: "#service-area" },
     { name: "FAQs", href: "#faqs" },
+    { name: "Blog", href: "/blog" },
   ];
 
   const [isOpen, setIsOpen] = useState(false);
