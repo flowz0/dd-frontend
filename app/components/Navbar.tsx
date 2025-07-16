@@ -17,6 +17,8 @@ export default function Navbar() {
   ];
 
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const scrollThreshold = 400;
   const router = useRouter();
   const pathname = usePathname();
 
@@ -49,10 +51,26 @@ export default function Navbar() {
     } else {
       document.body.classList.remove("overflow-hidden");
     }
+
+    const handleScroll = () => {
+      if (window.scrollY > scrollThreshold) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, [isOpen]);
 
   return (
-    <nav className="bg-[#ffffff] shadow shadow-[hsl(0,0%,80%)] fixed h-20 w-full z-50">
+    <nav className={`fixed h-20 w-full z-50 transition-all duration-300 ease-in-out ${pathname === "/booking" ? "bg-[#ffffff] shadow shadow-[hsl(0,0%,60%)]" : isOpen ?
+      "bg-[#ffffff]"
+      : isScrolled ? "bg-[#ffffff] shadow shadow-[hsl(0,0%,60%)]" : "transparent"} `}>
       <div className="flex justify-between items-center h-full max-w-7xl mx-auto px-6">
         <div className="flex gap-8">
           <Link href="/" onClick={() => setIsOpen(false)}>
@@ -97,7 +115,7 @@ export default function Navbar() {
             </Link>
           ) : (
             <div className="flex gap-6">
-              <Link href="tel:+18167082608" className="hidden text-[hsl(0,0%,50%)] font-semibold transition-colors duration-300 hover:text-[#333333] lg:flex lg:items-center lg:gap-x-2">
+              <Link href="tel:+18167082608" className="hidden text-[hsl(0,0%,40%)] font-semibold transition-colors duration-300 hover:text-[#333333] lg:flex lg:items-center lg:gap-x-2">
                 <FaPhoneAlt className="w-4 h-4" />
                 (816) 708-2608
               </Link>
