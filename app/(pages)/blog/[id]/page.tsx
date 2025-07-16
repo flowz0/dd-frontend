@@ -31,7 +31,7 @@ export default async function Page({ params }: Props) {
 
   return (
     <>
-      <article className="pt-32 px-6 max-w-7xl mx-auto lg:pt-40">
+      <article className="pt-28 px-6 max-w-7xl mx-auto sm:pt-32">
         <header>
           <h1 className="text-4xl max-w-4xl mx-auto font-semibold text-center sm:text-5xl">
             {blog.title}
