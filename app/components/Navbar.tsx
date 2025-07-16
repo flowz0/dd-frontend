@@ -18,7 +18,7 @@ export default function Navbar() {
 
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const scrollThreshold = 50;
+  const scrollThreshold = 0;
   const router = useRouter();
   const pathname = usePathname();
 
@@ -68,7 +68,7 @@ export default function Navbar() {
   }, [isOpen]);
 
   return (
-    <nav className={`fixed h-20 w-full z-50 transition-all duration-300 ease-in-out ${pathname === "/booking" ? "bg-[#ffffff] shadow shadow-[hsl(0,0%,60%)]" : isOpen ?
+    <nav className={`fixed h-20 w-full z-50 transition-all duration-300 ease-in-out ${isOpen ?
       "bg-[#ffffff]"
       : isScrolled ? "bg-[#ffffff] shadow shadow-[hsl(0,0%,60%)]" : "transparent"} `}>
       <div className="flex justify-between items-center h-full max-w-7xl mx-auto px-6">
