@@ -28,11 +28,11 @@ export default function Hero() {
           <FaCalendarAlt className="w-4 h-4" />
           Book online
         </Link>
-        <div className="absolute bottom-0 sm:relative">
+        <div className="absolute bottom-0 left-[-148px] sm:left-auto sm:relative">
           <Image
             src={DuctDaddyVan}
             alt="Duct daddy van"
-            className="object-cover w-auto h-[260px] max-w-4xl sm:mt-[9.675rem] lg:h-auto"
+            className="object-cover w-auto h-[260px] max-w-4xl sm:mt-[9.675rem] sm:h-auto"
             quality={100}
             loading="lazy"
             priority={false}
