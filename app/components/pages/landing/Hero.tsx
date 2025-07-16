@@ -13,8 +13,7 @@ export default function Hero() {
         className="object-cover h-full -z-50"
         quality={100}
         draggable={false}
-        loading="lazy"
-        priority={false}
+        priority={true}
       />
       <header className="absolute inset-0 z-10 flex flex-col items-center w-full px-6 pt-32 pb-32 sm:pt-36 sm:pb-32">
         <h1 className="text-[#333333] text-4xl font-semibold max-w-2xl text-center sm:text-6xl">
