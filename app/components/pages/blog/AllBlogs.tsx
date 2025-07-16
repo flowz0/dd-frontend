@@ -69,7 +69,7 @@ export default function AllBlogs() {
         {visibleCount < allBlogs.length && (
           <button
             onClick={handleShowMore}
-            className="bg-[#0080DB] text-[#E6E6E6] w-full py-3 px-6 flex items-center justify-center gap-x-3 font-semibold rounded-md hover:bg-[hsl(205,100%,33%)] active:bg-[hsl(205,100%,23%)] sm:w-fit"
+            className="text-[#333333] ring-2 ring-[#0080DB] w-full py-2 px-5 flex items-center justify-center gap-x-3 rounded-md font-semibold transition-all duration-300 ease-in-out hover:bg-[#0080DB] hover:text-[#E6E6E6] active:scale-95 sm:w-fit"
             aria-label="Show more blog posts"
           >
             Show more blogs
@@ -78,7 +78,7 @@ export default function AllBlogs() {
         {visibleCount > allBlogs.length && (
           <button
             onClick={handleShowLess}
-            className="bg-[#0080DB] text-[#E6E6E6] w-full py-3 px-6 flex items-center justify-center gap-x-3 font-semibold rounded-md hover:bg-[hsl(205,100%,33%)] active:bg-[hsl(205,100%,23%)] sm:w-fit"
+            className="text-[#333333] ring-2 ring-[#0080DB] w-full py-2 px-5 flex items-center justify-center gap-x-3 rounded-md font-semibold transition-all duration-300 ease-in-out hover:bg-[#0080DB] hover:text-[#E6E6E6] active:scale-95 sm:w-fit"
             aria-label="Show less blog posts"
           >
             Show less blogs
