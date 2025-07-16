@@ -1,7 +1,6 @@
 "use client";
 
 import { LoginData } from "@/types/login";
-import Link from "next/link";
 import { useState } from "react";
 import FormInput from "./FormInput";
 import { useRouter } from "next/navigation";
@@ -86,41 +85,38 @@ export default function LoginForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-6 md:w-1/2" noValidate>
-      <FormInput
-        name="username"
-        label="Username"
-        placeholder="Username"
-        className="bg-[#ffffff]"
-        value={formData.username}
-        onChange={handleChange}
-        onBlur={handleBlur}
-        error={errors.username}
-        required
-      />
-      <FormInput
-        name="password"
-        label="Password"
-        placeholder="••••••"
-        className="bg-[#ffffff]"
-        type="password"
-        value={formData.password}
-        onChange={handleChange}
-        onBlur={handleBlur}
-        error={errors.password}
-        required
-      />
+    <form onSubmit={handleSubmit} className="flex flex-col md:w-1/2" noValidate>
+      <div className="flex flex-col gap-4">
+        <FormInput
+          name="username"
+          label="Username"
+          placeholder="Username"
+          className="bg-[#ffffff]"
+          value={formData.username}
+          onChange={handleChange}
+          onBlur={handleBlur}
+          error={errors.username}
+          required
+        />
+        <FormInput
+          name="password"
+          label="Password"
+          placeholder="••••••"
+          className="bg-[#ffffff]"
+          type="password"
+          value={formData.password}
+          onChange={handleChange}
+          onBlur={handleBlur}
+          error={errors.password}
+          required
+        />
+      </div>
       <button
         type="submit"
-        className="bg-[#0080DB] text-[#E6E6E6] mt-4 py-2 px-4 rounded-md hover:bg-[hsl(205,100%,33%)] active:bg-[hsl(205,100%,23%)]"
+        className="bg-[#0080DB] text-[#E6E6E6] mt-6 py-2 px-4 rounded-md hover:bg-[hsl(205,100%,33%)] active:bg-[hsl(205,100%,23%)]"
       >
         Log in
       </button>
-      <p className="mt-2 text-center">
-        Don&apos;t have an account? {" "}
-        <br className="sm:hidden" />
-        <Link href="/register" className="text-[#0080DB] hover:underline hover:text-[hsl(205,100%,33%)] active:text-[hsl(205,100%,23%)]">Sign up</Link>
-      </p>
     </form>
   );
 }
