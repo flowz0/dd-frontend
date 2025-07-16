@@ -18,7 +18,7 @@ export default function Navbar() {
 
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const scrollThreshold = 400;
+  const scrollThreshold = 50;
   const router = useRouter();
   const pathname = usePathname();
 
