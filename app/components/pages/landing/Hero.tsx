@@ -1,60 +1,44 @@
 import Image from "next/image";
 import Link from "next/link";
-import { BsStarFill } from "react-icons/bs";
-import HeroImg from "@/public/kansas-city.jpg";
+import HeroImg from "@/public/kansas-city.png";
 import { FaCalendarAlt } from "react-icons/fa";
 import DuctDaddyVan from "@/public/duct-daddy-vehicle.png";
 
 export default function Hero() {
   return (
-    <section className="relative pt-28 pb-32 sm:pt-40 sm:pb-32 overflow-hidden">
-
-      <div className="absolute bottom-0 right-0 z-10 lg:w-[800px] max-w-none lg:right-32">
-        <Image
-          src={DuctDaddyVan}
-          alt="Duct Daddy van"
-          className="w-[600px] h-auto lg:w-full"
-          draggable={false}
-          priority
-          quality={100}
-        />
-      </div>
-
-      <div className="relative max-w-7xl px-6 mx-auto flex flex-col items-center lg:gap-x-2 lg:flex-row">
-        <header className="flex flex-col items-center lg:items-start lg:w-1/2">
-          <h1 className="text-4xl font-semibold max-w-lg text-center sm:text-5xl lg:text-start">
-            Kansas City&apos;s Trusted Air Duct & Dryer Vent Cleaning Experts
-          </h1>
-          <Link
-            href="/booking"
-            className="bg-[#0080DB] text-[#E6E6E6] mt-8 py-3 px-6 flex items-center gap-x-3 font-semibold rounded-md hover:bg-[hsl(205,100%,33%)] active:bg-[hsl(205,100%,23%)]"
-          >
-            <FaCalendarAlt className="w-4 h-4" />
-            Book online
-          </Link>
-          <div className="flex items-center gap-x-2 mt-6">
-            <span className="font-semibold">5.0</span>
-            <div className="flex gap-x-0.5">
-              <BsStarFill className="text-amber-500 w-4 h-4" />
-              <BsStarFill className="text-amber-500 w-4 h-4" />
-              <BsStarFill className="text-amber-500 w-4 h-4" />
-              <BsStarFill className="text-amber-500 w-4 h-4" />
-              <BsStarFill className="text-amber-500 w-4 h-4" />
-            </div>
-            <p className="text-[hsl(0,0%,40%)]">(67 reviews)</p>
-          </div>
-        </header>
-        <div className="flex items-center lg:w-1/2">
+    <section className="h-[800px] sm:h-[880px] relative overflow-hidden">
+      <Image
+        src={HeroImg}
+        alt="Kansas city background image"
+        className="object-cover h-full -z-50"
+        quality={100}
+        draggable={false}
+        loading="lazy"
+        priority={false}
+      />
+      <header className="absolute inset-0 z-10 flex flex-col items-center w-full px-6 pt-32 pb-32 sm:pt-36 sm:pb-32">
+        <h1 className="text-[#333333] text-4xl font-semibold max-w-2xl text-center sm:text-6xl">
+          Kansas City&apos;s Trusted Air Duct & Dryer Vent Cleaning Experts
+        </h1>
+        <Link
+          href="/booking"
+          className="bg-[#0080DB] text-[#E6E6E6] mt-8 py-3 px-6 flex items-center gap-x-3 font-semibold rounded-md shadow shadow-[hsl(0,0%,60%)] hover:bg-[hsl(205,100%,33%)] active:bg-[hsl(205,100%,23%)]"
+        >
+          <FaCalendarAlt className="w-4 h-4" />
+          Book online
+        </Link>
+        <div className="absolute bottom-0 lg:bottom-auto sm:relative">
           <Image
-            src={HeroImg}
-            alt="Hero image"
-            className="object-cover h-auto w-full max-w-4xl rounded-lg mt-12 shadow-lg shadow-[hsl(0,0%,80%)] lg:h-96 lg:mt-0"
-            draggable={false}
-            priority={true}
+            src={DuctDaddyVan}
+            alt="Duct daddy van"
+            className="object-cover w-full h-[280px] sm:h-auto sm:mt-32 lg:max-w-4xl"
             quality={100}
+            loading="lazy"
+            priority={false}
+            draggable={false}
           />
         </div>
-      </div>
+      </header>
     </section>
   );
 }
