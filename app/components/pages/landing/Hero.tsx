@@ -15,7 +15,7 @@ export default function Hero() {
         draggable={false}
         priority={true}
       />
-      <header className="absolute inset-0 z-10 flex flex-col items-center w-full px-6 pt-32 pb-32 sm:pt-36 sm:pb-32">
+      <header className="absolute inset-0 z-10 flex flex-col items-center w-full px-6 pt-28 pb-32 sm:pt-32">
         <h1 className="text-[#333333] text-4xl font-semibold max-w-md sm:max-w-2xl text-center sm:text-6xl">
           Kansas City&apos;s Trusted
           <br className="sm:hidden" />
@@ -28,11 +28,11 @@ export default function Hero() {
           <FaCalendarAlt className="w-4 h-4" />
           Book online
         </Link>
-        <div className="absolute bottom-0 lg:bottom-auto sm:relative">
+        <div className="absolute bottom-0 lg:relative">
           <Image
             src={DuctDaddyVan}
             alt="Duct daddy van"
-            className="object-cover w-full h-[280px] sm:h-auto sm:mt-32 lg:max-w-4xl"
+            className="object-cover w-full h-[260px] lg:h-auto sm:mt-[9.675rem] max-w-4xl"
             quality={100}
             loading="lazy"
             priority={false}
