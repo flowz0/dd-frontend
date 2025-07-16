@@ -10,6 +10,7 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { FaFileCirclePlus } from "react-icons/fa6";
 import axios from "axios";
+import LoadingSpinner from "@/app/components/LoadingSpinner";
 
 export default function DashboardPage() {
   const [authorized, setAuthorized] = useState(false);
@@ -51,7 +52,7 @@ export default function DashboardPage() {
 
   const refetchBlogs = fetchData;
 
-  if (loading) return <div className="p-8 text-center">Loading dashboard...</div>;
+  if (loading) return <LoadingSpinner />;
   if (!authorized) return null;
 
   return (
