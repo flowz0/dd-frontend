@@ -55,6 +55,13 @@ export const topRowReviews: Review[] = [
     message: "Not only did duct daddy do a great job with our vents…. The owner Was super knowledgeable and easy to work with!",
     avatar: RebeccaGreen
   },
+  {
+    id: 6, 
+    name: "Laurel Herz",
+    // brand: "Blue Springs",
+    message: "They were awesome!! Very quick and cleaned our returns and vents very well. Highly recommend them!!",
+    avatar: LaurelHerz
+  },
 ];
 
 export const bottomRowReviews: Review[] = [
@@ -92,5 +99,12 @@ export const bottomRowReviews: Review[] = [
     // brand: "Lee's Summit",
     message: "Finding good honest reliable contractors of any trade is a chore. I don't think you'll go wrong here!!!",
     avatar: JoeBlack
+  },
+  {
+    id: 6, 
+    name: "Matt Scrogham",
+    // brand: "Lee's Summit",
+    message: "The Team at Duct Daddy was awesome! They went through each vent of the house and cleaned everything.",
+    avatar: MattScrogham
   },
 ];
