@@ -2,7 +2,7 @@ import Stat from "./Stat";
 
 export default function Stats() {
   return (
-    <section className="bg-[#16385B] text-[#ffffff] py-20 px-6 flex flex-col items-center justify-center sm:py-32">
+    <section className="bg-[#16385B] text-[#ffffff] py-20 px-6 flex flex-col items-center justify-center sm:py-24">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-wrap justify-center flex-col gap-24 md:flex-row">
           <Stat
