@@ -1,2 +1,2 @@
 # Duct Daddy Website
-[WIP]
+v1.1 is designed. Currently in development phase. [WIP]
